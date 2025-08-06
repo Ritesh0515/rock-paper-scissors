@@ -1,7 +1,7 @@
 function getComputerChoice(){
-   let result = Math.floor(Math.random() * 3);
+   let com_result = Math.floor(Math.random() * 3);
 
-    switch(result){
+    switch(com_result){
         case 0 : 
             return "rock";
         case 1 :
@@ -12,3 +12,11 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice(){
+    let human_result = prompt("Enter your choice (rock,paper,scissor) :")
+
+    return human_result.toLowerCase();
+}
+
+console.log(getHumanChoice());
