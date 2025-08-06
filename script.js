@@ -1,9 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
-console.log("Human: ",humanScore);
-console.log("Computer: ",computerScore);
-
 function getComputerChoice(){
    let com_result = Math.floor(Math.random() * 3);
 
@@ -17,17 +11,17 @@ function getComputerChoice(){
     }
 }
 
-// console.log(getComputerChoice());
-
 function getHumanChoice(){
     let human_result = prompt("Enter your choice (rock,paper,scissor) :")
 
     return human_result.toLowerCase();
 }
 
-// console.log(getHumanChoice());
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
 
-function playRound(humanChoice,computerChoice){
+    function playRound(humanChoice,computerChoice){
    
     // humanChoice.toLowerCase();
 
@@ -67,9 +61,24 @@ function playRound(humanChoice,computerChoice){
     }
 }
 
-const human = getHumanChoice();
-const computer = getComputerChoice();
+for (let i= 0; i < 5; i++){
+   const humanSelection = getHumanChoice();
+   const computerSelection = getComputerChoice();
 
-playRound(human,computer);
+   playRound(humanSelection, computerSelection);
+}
 
-console.log(`scores -> Human: ${humanScore},Computer: ${computerScore}`)
+if (humanScore > computerScore){
+    console.log("🎊Congratulations!!!,You won the game")
+}
+else if(computerScore > humanScore){
+    console.log("Better Luck next time!,You lost the game.")
+}
+else{
+    console.log("The game is Drawn.")
+}
+}
+
+
+
+playGame();
