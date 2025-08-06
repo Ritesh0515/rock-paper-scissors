@@ -56,7 +56,7 @@ function playGame(){
     }
 
     else if(humanChoice === "scissor" && computerChoice === "rock"){
-        humanScore += 1;
+        computerScore += 1;
         console.log("You lose!! rock beats scissor")
     }
 }
