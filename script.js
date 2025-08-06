@@ -65,8 +65,12 @@ for (let i= 0; i < 5; i++){
    const humanSelection = getHumanChoice();
    const computerSelection = getComputerChoice();
 
+    console.log(`Round ${i+1}: You chose ${humanSelection} , Computer chose ${computerSelection}`);
+
    playRound(humanSelection, computerSelection);
 }
+
+console.log(`Final Score -> You : ${humanScore}, Computer: ${computerScore}`);
 
 if (humanScore > computerScore){
     console.log("🎊Congratulations!!!,You won the game")
